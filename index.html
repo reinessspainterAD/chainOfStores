@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Сеть магазинов</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="web3.min.js" defer></script>
+    <script src="./node_modules/bignumber.js/bignumber.js"></script>
+    <script type="module" src="script.js" defer></script>
+    <script src="./node_modules/bignumber.js/bignumber.js"></script>
+    
+    <link ref="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="body">
+      <div id="LoginForm">
+        <div id="LoginBox">
+          <label id="LoginLabel">Вход в систему</label>
+          <input id="LoginInput" type="text" placeholder="Введите ваш логин">
+          <error id="ValidationError"></error>
+          <button id="LoginBtn">Войти</button>
+        </div>
+      </div>
+      <div id="Personal_account">
+        <div id="UserData">  
+          <div class="FirstDiv">
+            <label id="Name"></label>
+            <label id="Role"></label>
+          </div>
+          <div class="SecondDiv">
+            <label id="Address"></label>
+            <label id="Balance"></label>
+          </div>
+        </div>
+        <button id="Exit">Выйти</button>        
+      </div>
+      <div id="Lol">
+        <div id="Functional"></div>
+      </div>
+      <div id="OperationHistory">
+        <label id="HistoryLabel">История операций:</label><br/>
+        <!--Заполнение истории через код -->
+      </div>
+      <div id="ListOfShops">
+        <label id="ShopLabel">Список магазинов:</label>
+        <div id="Shops"></div>
+        <!--Заполнение магазинов через код -->
+      </div>
+      <div id="ListOfApplications">
+        <label id="ApplicationsLabel">Список заявок:</label>
+      </div>
+
+      <!-- Окна для Админа -->
+      <!-- Добавление нового пользователя -->
+      <form id="addNewUser">
+          <label id="addNewUserLabel">Добавление нового Пользователя</label>
+          <select id="Addresses"></select>
+          <input id="addNewUserName" type="text" placeholder="Введите имя нового пользователя">
+          <input id="addNewUserLogin" type="text" placeholder="Введите логин нового пользователя">
+          <div>
+            <button id="addNewUserBtn">Добавить</button>
+          <button id="addNewUserClose">Закрыть</button>
+          </div>
+          
+      </form>
+
+      <!-- Добавление нового продавца -->
+      <form id="PromotionToSeller">
+        <label id="PromotionToSellerLabel">Добавление нового Продавца</label>
+        <select id="SellerAddresses"></select>
+        <input id="ShopId" type="text" placeholder="Введите id магазина">
+        <button id="AddNewSeller">Добавить</button>
+        <button id="SellerClose">Закрыть</button>
+      </form>
+
+      <!-- Понижение продавца до покупателя -->
+      <form id="DemoteSeller">
+        <label id="DemotionLabel">Понижение Продавца</label>
+        <select id="DemoteAddresses"></select>
+        <button id="DemoteBtn">Уволить!!!</button>
+        <button id="DemoteClose">Закрыть</button>
+      </form>
+
+      <!-- Добавление нового админа -->
+      <form id="AddingNewAdmin">
+        <label id="AddingNewAdminLabel">Назначение нового админа</label>
+        <select id="UserAddresses"></select>
+        <button id="AddBtn">Назначить</button>
+        <button id="AddingNewAdminClose">Закрыть</button>
+      </form>
+
+      <!-- Добавление нового магазина -->
+      <form id="AddingNewShop">
+        <label id="AddingNewShopLabel">Создание нового магазина</label>
+        <select id="ShopAddresses"></select>
+        <input id="ShopCity" type="text" placeholder="Введите город">
+        <input id="ShopAddress" type="text" placeholder="Введите адрес">
+        <button id="ShopAdd">Добавить</button>
+        <button id="AddingNewShopClose">Закрыть</button>
+      </form>
+
+      <!-- Удаление магазина -->
+      <form id="DeletingShop">
+        <label id="DeletingShopLabel">Удаление магазина</label>
+        <select id="DeleteShopAddresses"></select>
+        <button id="ShopDelete">Удалить</button>
+        <button id="DeleteShopClose">Закрыть</button>
+      </form>
+      <!-- ---------------------------->
+
+      <!-- Окна для продавца -->
+      <form id="ResignationLetter">
+        <label id="ResignationLetterLabel">Заявка на увольнение</label>
+        <button id="Resignate">Подать заявку</button>
+        <button id="ResignationLetterClose">Закрыть</button>
+      </form>
+      <!-- И для покупателя -->
+      <form id="WriteComment">
+        <label id="WriteCommentLabel">Оставить коментарий к отзыву</label>
+        <input id="ReviewID" type="number" placeholder="Id-отзыва">
+        <input id="WriteCommentReview" type="text" placeholder="Напишите свой комментарий">
+        <input id="Like" type="bool" placeholder="Понравился отзыв?">
+        <button id="SendComment">Отправить комментарий</button>
+        <button id="WriteCommentClose">Закрыть</button>
+      </form>
+      <!-- ------------------ -->
+
+      <!-- Окна для покупателя -->
+      <form id="jobApplicationSeller">
+        <label id="jobApplicationSellerLabel">Заявка на роль продавца</label>
+        <button id="Applicate">Подать заявку</button>
+        <button id="jobApplicationSellerClose">Закрыть</button>
+      </form>
+
+      <form id="WriteReview">
+        <label id="WriteReviewLabel">Оставить отзыв</label>
+        <input id="ShopId" type="number" placeholder="Id магазина">
+        <input id="Review" type="text" placeholder="Отзыв на магазин">
+        <input id="Rating" type="number" placeholder="Рейтинг">
+        <button id="SendReview">Отправить отзыв</button>
+        <button id="WriteReviewClose">Закрыть</button>
+      </form>
+    </div>
+  </body>
+</html>
